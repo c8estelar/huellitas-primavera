@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"><!--librería de botones-->
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Huellitas Primavera | Landing Page</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand brand" href="./index.html">
+                    <img src="./img/logo_huellitas_de_primavera_sin_fondo.png" alt="logo huellitas">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navegacion-principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navegacion-principal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a href="" class="btn btn-sm">Inicio de sesión</a> <!--PENDIENTE ENLAZAR CON LA PÁGINA DE INICIO DE SESIÓN-->
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="btn btn-sm">Algo plus</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="btn btn-sm">Servicios y horarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="btn btn-sm">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="btn btn-sm">Admin</a> <!--PENDIENTE ENLAZAR CON LA PÁGINA DE ADMIN-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main>
+        <section class="container seccion-ppal" id="inicio">
+            <div id="carousel" data-bs-ride="carousel" class="carousel slide carousel-fade">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Primera imagen"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="imagen 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+                    
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/im1.png" alt="perritos1" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Comunidad activa</span>
+                            <h2>Únete a nuestro club de lectura</h2>
+                            <p>Tertulias, análisis de clásicos y encuentros abiertos para compartir lecturas.</p>
+                            <a href="#servicios" class="btn primary-button">Conocer las actividades</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/im2.png" alt="Sala de lectura rodeada de estanterías" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Biblioteca para la comunidad</span>
+                            <h2>Leer, aprender y compartir</h2>
+                            <p>Un espacio acogedor con recursos y servicios para toda la comunidad.</p>
+                            <a href="#horarios" class="btn primary-button">Consultar horarios</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/im3.png" alt="Libros y una taza en una mesa de lectura" class="d-block w-100">
+                        <div class="hero-contenido">
+                            <span class="minititulo">Narrativa y ficción</span>
+                            <h2>Grandes historias para soñar en voz alta.</h2>
+                            <p>Nuevas adquisiciones literarias de autores nacionales e internacionales</p>
+                            <a href="#recomendaciones" class="btn primary-button">Ver colección de ficción</a>
+                        </div>
+                    </div>
+        
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="caroursel-prev-icon" aria-hidden="true"></span>
+                    <span class="escondido"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <!--los data-bs-target es lo que apunta a un parámetro u otro, por ejemplo, wn este caso estamos en la sección que genera el carrusel, al principio de la sección está el parámetro data-bs-RIDE con el atributo de carousel, los data-bs-target hacen como un href cuando se le pone el # y lo refieren al ride que funciona como un id de lo que se está haciendo, idk jekj-->
+                    <span class="carousel-next-icon" aia-hidden="true"></span>
+                    <span class="escondido"></span>
+                </button>
+            </div>
+
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h2 class="footer-brand"><img src="./img/bibliotech_fondo_transparente.webp" alt=""> BiblioTech</h2>
+                    <p>Biblioteca Municipal y Comunitaria. Un refugio de conocimiento, lectura compartida y dinamización cultural para toda la ciudadanía.</p>
+                    <!--Incluir un iconito de check y luego la letra a continuación-->
+                    <p class="network-note">Red Municipal de Bibliotecas y Archivos</p>
+                </div>
+                <div>
+                    <h3>Horarios de Atención</h3>
+                    <!--Iconito de reloj-->
+                    <p class="footer-label"> Lunes a Sábado</p>
+                    <p>08:00 - 20:00 hrs</p>
+                    <!--iconito de reloj dasi-->
+                    <p class="footer-label"> Domingos</p>
+                    <p>10:00 - 14:00 hrs</p>
+                </div>
+                <div>
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#inicio">Inicio</a>
+                    <a href="./pages/catalgo.html">Catálogo de libros</a>
+                    <a href="#horarios">Normativa de préstamos</a>
+                    <a href="./pages/admin.html">Portal de Administración</a>
+                </div>
+                <div>
+                    <h3>Ubicación</h3>
+                    <!--iconito de ubicación-->
+                    <p> Paseo Cultural 14, Plaza Mayor</p>
+                    <!--iconito de teléfono-->
+                    <a href="tel:+573001230000"> +57 300 123 00 00</a>
+                    <!--iconito de mail-->
+                    <a href="mailto:info@bibliotech.org">; info@bibliotech.org</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <!--Iconito de copyright seguido del siguiente texto-->
+                <p>© 2025 BiblioTech Biblioteca Municipal. Todos los derechos reservados.</p>
+                <div><a href="#">Políticas de Privacidad</a><a href="#">Términos de Servicio</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> <!--Permite que funcione el carrusel de bootstrap-->
+</body>
+</html>
