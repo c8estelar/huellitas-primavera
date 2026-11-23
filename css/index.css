@@ -1,1 +1,26 @@
-/*GRADIENTE SUGERIDO POR EL SITIO WEB STITCH CON EL OBJETIVO DE USARLOPARA EL CARRUSELLLL*/
+@import url(./base.css);
+
+body {
+    background-color: var(--fondo-general);
+    color: var(--neutral);
+    font-family: var(--titulos), var(--texto);
+    font-size: 14px;
+}
+
+.splide__track ul {
+    gap:2rem;
+}
+.splide__slide h3 {
+    color: var(--coral-profundo);
+    font-size: medium;
+    margin-top: 1rem;
+}
+.medalla {
+    background: linear-gradient(90deg, var(--secundario)20%, var(--primario)40%, var(--secundario)80%);
+    border: none;
+    border-radius: 100%;
+    width: 15rem;
+    height: 15rem;
+    padding: 10px;
+    margin-right: 25rem;
+}

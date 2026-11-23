@@ -18,8 +18,6 @@
     --fondo-contenedores: #defbe6;
 
     /*Otros*/
-    --verde-oscuro: #1b3815;
-    --verde-bosque: #234e20;
     --verde-soft: #c4e1cd;
     --coral-profundo: #e06346;
 
@@ -29,6 +27,5 @@
     --texto-secundario: #587c50;
     --texto-destacado: #ff8e72;; /*También puede ser usado para enlaces*/
     --para-fondo-oscuro: #defbe6;
-
 
 }
