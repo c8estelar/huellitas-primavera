@@ -18,7 +18,12 @@
             <div class="container">
                 <a class="navbar-brand brand" href="./index.html">
                     <img src="./img/logo_huellitas.png" alt="logo huellitas">
-                    <span><strong>Huellitas</strong>Primavera</span>
+                    <h1>
+                        <span>
+                            <strong>Huellitas</strong>Primavera
+                        </span>
+                    </h1>
+
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -113,56 +118,56 @@
             <ul class="splide__list">
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion1-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion1-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion2-removebg.png" width="100" height="100" alt="Perrito 2">
+                        <img src="./img/perritoadopcion2-removebg.png" alt="Perrito 2">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion3-removebg.png" width="100" height="100" alt="Perrito 3">
+                        <img src="./img/perritoadopcion3-removebg.png" alt="Perrito 3">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion4-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion4-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion5-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion5-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion6-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion6-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
                 <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion7-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion7-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
                 </li>
-                 <li class="splide__slide">
+                <li class="splide__slide">
                     <button class="medalla">
-                        <img src="./img/perritoadopcion8-removebg.png" width="100" height="100" alt="Perrito">
+                        <img src="./img/perritoadopcion8-removebg.png" alt="Perrito">
                         <h3>Nombre del perrito</h3>
                         <p>Edad del perrito</p>
                     </button>
@@ -208,18 +213,17 @@
     <script src="./libs/splide/splide.min.js"></script> <!--esto carga la librería splide-->
     <!--esto configura el carrusel que se muestra-->
     <script>
-        new Splide('.splide', {
-            type: 'loop',
-            perPage: 1,
-            autoplay: true,
-            interval: 4000,
-            pauseOnHover: true,
-        }).mount();
-
         var splide = new Splide('.splide', {
             type: 'loop',
-            perPage: 3,
+            perPage: 4,
+            perMove: 1,
+            gap: '1.5rem',
             focus: 'center',
+            breakpoints: {
+                1024: { perPage: 3 },
+                768: { perPage: 2 },
+                480: { perPage: 1 }
+            }
         });
 
         splide.mount();
