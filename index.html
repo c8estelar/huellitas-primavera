@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"><!--librería de botones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--librería de botones-->
+    <link rel="stylesheet" href="./libs/splide/splide.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Huellitas Primavera | Landing Page</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg">
@@ -24,10 +28,11 @@
                 <div class="collapse navbar-collapse" id="navegacion-principal">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                         <li class="nav-item">
-                            <a href="" class="btn btn-sm">Inicio de sesión</a> <!--PENDIENTE ENLAZAR CON LA PÁGINA DE INICIO DE SESIÓN-->
+                            <a href="" class="btn btn-sm">Inicio de sesión</a>
+                            <!--PENDIENTE ENLAZAR CON LA PÁGINA DE INICIO DE SESIÓN-->
                         </li>
                         <li class="nav-item">
-                            <a href="" class="btn btn-sm">Algo plus</a> 
+                            <a href="" class="btn btn-sm">Algo plus</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="btn btn-sm">Servicios y horarios</a>
@@ -44,15 +49,18 @@
         </nav>
     </header>
 
-<main>
+    <main>
+        <!--CARRUSEL PRINCIPAL DEL SITIO (SÓLO IMAGENES E INFO)-->
         <section class="container seccion-ppal" id="inicio">
             <div id="carousel" data-bs-ride="carousel" class="carousel slide carousel-fade">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Primera imagen"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="imagen 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Primera imagen"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
+                        aria-label="imagen 2"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
-                    
+
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -82,7 +90,7 @@
                             <a href="#recomendaciones" class="btn primary-button">boton</a>
                         </div>
                     </div>
-        
+
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -95,12 +103,45 @@
                     <span class="escondido"></span>
                 </button>
             </div>
+        </section>
+    </main>
+
+    <!--CARRUSEL COLLAR DE PERRITOS-->
+    <section class="splide" aria-label="Mascotas de Huellitas">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion1-removebg.png" alt="Perrito en adopción">perrito1</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion2-removebg.png" alt="Perrito en adopcion 2">perrito2</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion3-removebg.png" alt="Perrito 3">perrito3</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion4-removebg.png" alt="Perrito">perrito3</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion5-removebg.png" alt="Perrito">perrito3</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion6-removebg.png" alt="Perrito">perrito3</button>
+                </li>
+                <li class="splide__slide">
+                    <button class="medalla"><img src="./img/perritoadopcion7-removebg.png" alt="Perrito">perrito3</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--FIN DE LA SECCIÓN DE COLLAR DE PERRITOSSSSSSS-->
 
     <footer class="site-footer" id="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h2 class="footer-brand"><img src="./img/logo_huellitas_de_primavera_sin_fondo.png" alt="logo huellitas"> Huellitas primavera</h2>
+                    <h2 class="footer-brand"><img src="./img/logo_huellitas_de_primavera_sin_fondo.png"
+                            alt="logo huellitas"> Huellitas primavera</h2>
                     <p>info de huellitas </p>
                     <!--Incluir un iconito de check y luego la letra a continuación-->
                     <p></p>
@@ -126,6 +167,27 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> <!--Permite que funcione el carrusel de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Permite que funcione el carrusel de bootstrap-->
+    <script src="./libs/splide/splide.min.js"></script> <!--esto carga la librería splide-->
+    <!--esto configura el carrusel que se muestra-->
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            autoplay: true,
+            interval: 4000,
+            pauseOnHover: true,
+        }).mount();
+
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            focus: 'center',
+        });
+
+        splide.mount();
+    </script> <!--JAVASCRITP DE SPLIDE PARA CARRUSEL DE COLLAR DE PERRITOS-->
 </body>
+
 </html>
