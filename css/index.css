@@ -7,6 +7,55 @@ body {
     font-size: 14px;
 }
 
+.brand img {
+    display:block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--texto-titulos);
+    font-size: 1rem;
+}
+
+.brand span {
+    font-size:1rem;
+    font-weight: bold;
+    color:var(--primario);
+
+}
+
+.brand span strong{
+    font-size: 1rem;
+    color: var(--fondo-destacados);
+    font-weight: bold;
+}
+
+.brand :hover {
+    color: var(--coral-profundo);
+}
+
+/*estilos del carrusel principal*/
+#carousel .carousel-item::after{ /*--Este estilo otorga un efecto visual al final de cada carrusel item*/
+    content:"";
+    position: absolute; /*Si tuviera posición relativa no se vería el degradado */
+    z-index:1;
+    inset:0; /*este atributo hace el elemento ocupe todo el área que lo contiene*/
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-secundario)80%, transparent) 0%,
+        color-mix(in srgb, var(--color-secundario)50%, transparent) 43%,
+        transparent 100%
+    );
+}
+
+/*estilos del carrusel tipo collar de perritos*/
+.splide {
+    margin-top: 5rem;
+}
 .splide__track ul {
     gap:2rem;
 }
@@ -22,5 +71,4 @@ body {
     width: 15rem;
     height: 15rem;
     padding: 10px;
-    margin-right: 25rem;
 }
