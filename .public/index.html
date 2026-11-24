@@ -47,7 +47,7 @@
                             <a href="" class="btn btn-sm">Ubicación</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="btn btn-sm">Admin</a> <!--PENDIENTE ENLAZAR CON LA PÁGINA DE ADMIN-->
+                            <a href="admin.html" class="btn btn-sm">Admin</a> <!--PENDIENTE ENLAZAR CON LA PÁGINA DE ADMIN-->
                         </li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@
     <!--CARRUSEL COLLAR DE PERRITOS-->
     <section class="splide" aria-label="Mascotas de Huellitas">
         <div class="splide__track">
-            <ul class="splide__list">
+            <ul class="splide__list" id="carrusel-perritos">
                 
             </ul>
         </div>
@@ -157,22 +157,8 @@
     <!--Permite que funcione el carrusel de bootstrap-->
     <script src="./libs/splide/splide.min.js"></script> <!--esto carga la librería splide-->
     <!--esto configura el carrusel que se muestra-->
-    <script>
-        var splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 4,
-            perMove: 1,
-            gap: '1.5rem',
-            focus: 'center',
-            breakpoints: {
-                1024: { perPage: 3 },
-                768: { perPage: 2 },
-                480: { perPage: 1 }
-            }
-        });
-
-        splide.mount();
-    </script> <!--JAVASCRITP DE SPLIDE PARA CARRUSEL DE COLLAR DE PERRITOS-->
+    <script src="js/api.js"></script>
+    <script src="js/catalogo.js"></script>
 </body>
 
 </html>
