@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');   
+
+:root {
+    /*FUentes*/
+    --titulos: 'Poppins', sans-serif;
+    --texto: 'Lato', sans-serif;
+
+    /*Colores base del diseño*/
+    --primario: #78a86b;
+    --secundario: #B9D0A8;
+    --terciario: #E99584;
+    --neutral: #334C3D;
+
+    /*Fondos*/
+    --fondo-general: #e8ffee;
+    --fondo-secciones: #234e20;
+    --fondo-destacados: #1b3815;
+    --fondo-contenedores: #defbe6;
+
+    /*Otros*/
+    --verde-soft: #c4e1cd;
+    --coral-profundo: #e06346;
+
+    /*Textos*/
+    --texto-titulos: #1B3815;
+    --texto-principal: #2d5a27;
+    --texto-secundario: #587c50;
+    --texto-destacado: #ff8e72;; /*También puede ser usado para enlaces*/
+    --para-fondo-oscuro: #defbe6;
+
+}

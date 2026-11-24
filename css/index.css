@@ -1,0 +1,187 @@
+@import url(./base.css);
+
+body {
+    background-color: var(--fondo-general);
+    color: var(--neutral);
+    font-family: var(--titulos), var(--texto);
+    font-size: 14px;
+}
+
+
+/*estilos del header*/
+.brand img {
+    display:block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--texto-titulos);
+    font-size: 1rem;
+}
+
+.brand span {
+    font-size:1rem;
+    font-weight: bold;
+    color:var(--primario);
+
+}
+
+.brand span strong{
+    font-size: 1rem;
+    color: var(--fondo-destacados);
+    font-weight: bold;
+}
+
+.brand :hover {
+    color: var(--coral-profundo);
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:hover{
+    border: none;
+    box-shadow: 0 0.35rem 0.9rem var(--primario);
+}
+
+.btn.btn-sm{
+    transition: 1s;
+}
+
+.btn.btn-sm:hover{
+    background-color: var(--secundario);
+    border-radius: 99px;
+    color: var(--texto-titulos);
+    transition: 1.5s;
+}
+
+/*estilos del carrusel principal*/
+
+#carousel {
+    border-radius: 0.7rem;
+    overflow: hidden; /*si no se pone ese overflow hidden, no se aplica el border radius puesto arriba.*/
+}
+
+#carousel .carousel-item::after{ /*--Este estilo otorga un efecto visual al final de cada carrusel item*/
+    content:"";
+    position: absolute; /*Si tuviera posición relativa no se vería el degradado */
+    z-index:1;
+    inset:0; /*este atributo hace el elemento ocupe todo el área que lo contiene*/
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--neutral)80%, transparent) 0%,
+        color-mix(in srgb, var(--neutral)50%, transparent) 43%,
+        transparent 100%
+    );
+}
+
+#carousel .hero-contenido {
+    position: absolute;
+    z-index:2;
+    top:50%;
+    left: 7%;
+    width: min(80%, 32rem);
+    transform: translateY(-40%);
+    color: var(--secundario);
+}
+
+#carousel .hero-contenido .minititulo {
+    color: var(--para-fondo-oscuro);
+    text-transform: uppercase;
+    width: min(30%, 50rem);
+    font-weight: 600;
+    background-color: color-mix(in srgb, var(--neutral) 60%, transparent); /*se usa color-mix en vez de alpha porque a veces la vista previa de la página no lo muestra*/
+    padding: 0.2rem 0.5rem 0.2rem;
+    border-radius: 99px;
+    letter-spacing: 0.1rem;
+}
+
+#carousel .hero-contenido h2 {
+    color: var(--fondo-contenedores);
+    font-weight: 600;
+    position: relative;
+    top: 5px;
+    width: min(80%, 32rem);
+    transform: translateX(2%);
+}
+
+#carousel .hero-contenido p {
+    color: var(--fondo-general);
+    font-size: 0.7rem;
+    font-weight: 200;
+    transform: translateX(2%);
+}
+
+#carousel .hero-contenido .btn.primary-button {
+    color: var(--fondo-contenedores);
+    font-size: 0.96rem;
+    font-weight: 550;
+    transition: 1s;
+}
+
+#carousel .hero-contenido .btn.primary-button:hover{
+    color: var(--texto-titulos);
+    background-color: var(--fondo-contenedores);
+    border-radius: 70px;
+    transition: 1s;
+    font-size: 0.96rem;
+    font-weight: 550;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+/*estilos del carrusel tipo collar de perritos*/
+.splide {
+    margin-top: 5rem;
+}
+
+.splide__slide {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.splide__track ul {
+    gap:2rem;
+}*/
+
+.splide__slide h3 {
+    color: var(--coral-profundo);
+    font-size: medium;
+    margin-top: 1rem;
+}
+.medalla {
+    background: linear-gradient(90deg, var(--secundario)20%, var(--primario)40%, var(--secundario)80%);
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    width: min(15rem, 70vw); /*esto es para*/
+    height: auto;
+    margin: 5%;
+    padding: 1rem ;
+    box-shadow: 0 0.1rem 0.6rem 0.5rem var(--secundario);
+
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.medalla img {
+    width: 55%;
+    max-width: 6.2rem;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+/*estilos del footer*/
