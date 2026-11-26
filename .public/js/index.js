@@ -6,8 +6,9 @@ async function catalogoMascotas() {
         carrusel.innerHTML += `
                             <li class="splide__slide">
                                 <button class="medalla">
-                                    <img src="./img/perritoadopcion1-removebg.png" alt="Perrito">
+                                    <img src="${mascota.img || "./img/perritoadopcion1-removebg.png"}" alt="${mascota.name}">
                                     <h3>${mascota.name}</h3>
+                                    <small>${mascota.race}</small>
                                     <p>${mascota.age}</p>
                                 </button>
                             </li>
@@ -15,6 +16,7 @@ async function catalogoMascotas() {
         
         `;
     });
+    splide.mount();
 }
 var splide = new Splide(".splide", {
     type: "loop",
@@ -29,5 +31,4 @@ var splide = new Splide(".splide", {
     },
 });
 
-splide.mount();
 catalogoMascotas();
