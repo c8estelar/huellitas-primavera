@@ -34,11 +34,18 @@ p{
     font-weight: 100;
 }
 
+strong{
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
 input{ /*Estilos de campos de texto*/
     background-color: var(--fondo-general) !important; 
 }
 
 article{
+    display: flex;
+    flex-direction: row;
     background-color: var(--secundario);
     padding: .4em;
     border-radius: 15px;
@@ -49,3 +56,20 @@ article p{
     text-align: left;
     font-size: small;
 }
+
+#bombillo{
+    width: 2em;
+    height: 2em;
+    margin: 12px;
+}
+
+button{
+    background-color: var(--primario) !important;
+    color: var(--texto-titulos) !important;
+    border-radius: 25px !important;
+    padding: 10px 24px !important;
+    font-weight: 500 !important;
+    padding-top: 0.8em !important;
+    padding-bottom: 0.8em !important;
+}
+
