@@ -1,0 +1,51 @@
+@import url(./base.css);
+
+body {
+    background-color: var(--fondo-general);
+    color: var(--neutral);
+    font-family: var(--titulos), var(--texto);
+    font-size: 14px;
+}
+
+.card{
+    border-radius: 4.5%;
+    padding: 1.5em;
+}
+
+img{
+    width: 10em;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#refugio{
+    font-size: x-small;
+}
+
+h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+input{ /*Estilos de campos de texto*/
+    background-color: var(--fondo-general) !important; 
+}
+
+article{
+    background-color: var(--secundario);
+    padding: .4em;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+article p{
+    text-align: left;
+    font-size: small;
+}
