@@ -1,6 +1,10 @@
 const form = document.getElementById("form-mascota");
 const inputs = document.querySelectorAll(".form-control, .form-select")
 let idEditando = null;
+const modalElement = document.getElementById("modalMascota");
+const modalMascota = bootstrap.Modal.getOrCreateInstance(modalElement);
+const tituloModal = document.getElementById("tituloModalMascota");
+document.getElementById("btnNuevaMascota").addEventListener("click", creacion);
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formData = new FormData(form);
@@ -15,6 +19,7 @@ form.addEventListener("submit", async (event) => {
 
     listarMascotas();
     creacion()
+    modalMascota.hide()
 });
 const table = document.getElementById("tabla-mascotas");
 
@@ -25,11 +30,13 @@ async function listarMascotas() {
         table.innerHTML += `
                         <tr>
                             <td>${mascota.id}</td>
+                            <td>${mascota.img}</td>
                             <td>${mascota.name}</td>
                             <td>${mascota.genre}</td>
                             <td>${mascota.race}</td>
-                            <td>${mascota.age}</td>
+                            <td>${mascota.age} ${mascota.ageUnit}</td>
                             <td>${mascota.size}</td>
+                            <td>${mascota.status}</td>
                             <td>${mascota.details}</td>
                             <td> <button class="btn btn-warning btn-edit" data-id="${mascota.id}">EDIT</button> <button class="btn btn-danger btn-delete" data-id="${mascota.id}">DELETE</button> </td>
                         </tr>
@@ -62,21 +69,20 @@ async function editarMascotas(id) {
     edicion()
     inputs.forEach(input => {
         input.value = datos[input.name]
-        
     });
-    
+    modalMascota.show()
 }
 const btnForm = document.getElementById("btnSubmit")
 function edicion(){
-    btnForm.classList.remove("btn-primary")
-    btnForm.classList.add("btn-warning")
-    btnForm.textContent = "EDIT"
+    btnForm.style.backgroundColor= "var(--coral-profundo)"
+    btnForm.textContent = "EDITAR"
+    tituloModal.textContent = "Editar mascota"
 }
 function creacion(){
     idEditando = null
-    btnForm.classList.remove("btn-warning")
-    btnForm.classList.add("btn-primary")
-    btnForm.textContent = "SAVE"
+    btnForm.style.backgroundColor = "var(--terciario)"
+    btnForm.textContent = "GUARDAR"
+    tituloModal.textContent = "Registrar mascota"
     form.reset()
 }
 
