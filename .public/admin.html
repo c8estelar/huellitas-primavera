@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestión | Huellitas Primavera</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body class="admin-page">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <a class="sidebar-brand" href="./index.html">
+                <img src="./img/logo_huellitas.png" alt="">
+                <span>
+                    <strong>Panel de Refugio</strong>
+                    <small>Gestión y Rescate</small>
+                </span>
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Navegación de administración">
+                <a class="sidebar-link is-active" href="#resumen">
+                    <i class="bi bi-grid" aria-hidden="true"></i>
+                    Resumen General
+                </a>
+                <a class="sidebar-link" href="#expedientes">
+                    <i class="bi bi-paw" aria-hidden="true"></i>
+                    Expedientes Caninos
+                </a>
+                <a class="sidebar-link" href="#solicitudes">
+                    <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+                    Solicitudes de Adopción
+                </a>
+                <a class="sidebar-link" href="#visitas">
+                    <i class="bi bi-calendar3" aria-hidden="true"></i>
+                    Visitas y Citas
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main" id="resumen">
+            <header class="topbar">
+                <a class="topbar-brand" href="./index.html">
+                    <img src="./img/logo_huellitas.png" alt="">
+                    <span>Huellitas de Primavera</span>
+                </a>
+            </header>
+
+            <section class="dashboard-content">
+                <h1>Panel de Gestión de Perritos y Adopciones</h1>
+                <p>Supervisa los expedientes y el estado de las adopciones del refugio.</p>
+                <section class="stats-grid" aria-label="Resumen de adopciones">
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-paw-fill" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-green">Activos</span>
+                        </div>
+                        <p class="stat-number">18</p>
+                        <p class="stat-label">En adopción activa</p>
+                        <span class="stat-progress progress-green" aria-hidden="true"></span>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-hourglass-split" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-mint">Entrevistas</span>
+                        </div>
+                        <p class="stat-number">5</p>
+                        <p class="stat-label">En proceso de adopción</p>
+                        <span class="stat-progress progress-mint" aria-hidden="true"></span>
+                    </article>
+
+                    <article class="stat-card stat-card-coral">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-heart" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-coral">Primavera 2025</span>
+                        </div>
+                        <p class="stat-number">32</p>
+                        <p class="stat-label">Finales felices logrados</p>
+                        <span class="stat-progress progress-coral" aria-hidden="true"></span>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-envelope-check" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-green">Por evaluar</span>
+                        </div>
+                        <p class="stat-number">7</p>
+                        <p class="stat-label">Solicitudes pendientes</p>
+                        <span class="stat-progress progress-dark" aria-hidden="true"></span>
+                    </article>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
