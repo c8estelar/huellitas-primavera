@@ -9,11 +9,13 @@ const realPassword = "huellitas2025";
 boton.addEventListener("click", function logIn(){
     if (email.value === realEmail && password.value === realPassword) {
         window.location.href = "http://127.0.0.1:5500/index.html"
+        sessionStorage.setItem("email", email.value);
+        sessionStorage.setItem("password", password.value);
     }
     else {
         fallo.innerText = "Inicio de sesión fallido (CAMPOS INCORRECTOS)"
         fallo.style.color = "red";
-        email.value = null;
-        password.value = null;
+        email.value = "";
+        password.value = "";
     }
 } )
