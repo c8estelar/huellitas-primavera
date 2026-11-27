@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5050/mascotas";
+const API_URL = "http://localhost:3000/mascotas";
 async function store(mascota) {
     try {
         const res = await fetch(API_URL, {

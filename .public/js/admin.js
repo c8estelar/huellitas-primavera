@@ -4,6 +4,9 @@ let idEditando = null;
 const modalElement = document.getElementById("modalMascota");
 const modalMascota = bootstrap.Modal.getOrCreateInstance(modalElement);
 const tituloModal = document.getElementById("tituloModalMascota");
+let activos = document.getElementById("activos")
+let proceso = document.getElementById("proceso")
+let adoptados = document.getElementById("adoptados")
 document.getElementById("btnNuevaMascota").addEventListener("click", creacion);
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -25,12 +28,15 @@ const table = document.getElementById("tabla-mascotas");
 
 async function listarMascotas() {
     const mascotas = await index();
+        activos.innerText = mascotas.filter((mascota) => mascota.status === "Disponible").length
+        proceso.innerText = mascotas.filter((mascota) => mascota.status === "Process").length
+        adoptados.innerText = mascotas.filter((mascota) => mascota.status === "Adoptado").length
     table.innerHTML = "";
     mascotas.forEach((mascota) => {
         table.innerHTML += `
                         <tr>
                             <td>${mascota.id}</td>
-                            <td>${mascota.img}</td>
+                            <td><img src="${mascota.img}" id="img-table"></td>
                             <td>${mascota.name}</td>
                             <td>${mascota.genre}</td>
                             <td>${mascota.race}</td>
@@ -41,7 +47,8 @@ async function listarMascotas() {
                             <td> <button class="btn btn-warning btn-edit" data-id="${mascota.id}">EDIT</button> <button class="btn btn-danger btn-delete" data-id="${mascota.id}">DELETE</button> </td>
                         </tr>
                         `;
-    });
+                    })
+
     const buttons = table.querySelectorAll(".btn");
     buttons.forEach((btn) => {
         btn.addEventListener("click", async (event) => {

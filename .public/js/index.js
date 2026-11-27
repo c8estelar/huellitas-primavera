@@ -1,8 +1,17 @@
 const carrusel = document.getElementById("carrusel-perritos");
+const total = document.getElementById("stat-total")
+const hembras = document.getElementById("stat-hembras")
+const machos = document.getElementById("stat-machos")
+const menores = document.getElementById("stat-cachorros")
 async function catalogoMascotas() {
     carrusel.innerHTML = "";
-    const data = await index();
-    data.forEach((mascota) => {
+    const mascotas = await index();
+        total.innerText = mascotas.filter((mascota) => mascota.status === "Disponible").length
+        hembras.innerText = mascotas.filter((mascota) => mascota.genre === "Hembra").length
+        machos.innerText = mascotas.filter((mascota) => mascota.genre === "Macho").length
+        menores.innerText = mascotas.filter((mascota) => ((mascota.age < 3)&&(mascota.ageUnit === "Años")) || ((mascota.age < 36)&& (mascota.ageUnit === "Meses")) ).length
+
+    mascotas.forEach((mascota) => {
         carrusel.innerHTML += `
                             <li class="splide__slide">
                                 <button class="medalla">
