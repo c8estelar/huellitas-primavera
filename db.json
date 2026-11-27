@@ -1,4 +1,17 @@
 {
-  "mascotas": [],
+  "mascotas": [
+    {
+      "name": "abi",
+      "genre": "Macho",
+      "race": "Husky",
+      "age": 3,
+      "ageUnit": "Años",
+      "size": "Mediano",
+      "img": "",
+      "status": "Disponible",
+      "details": "a",
+      "id": "7fpgaHsVu5c"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
