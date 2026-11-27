@@ -1,3 +1,9 @@
+if (
+    sessionStorage.getItem("email") === "admin@huellitasdeprimavera.org" && sessionStorage.getItem("password") === "huellitas2025"
+){
+    window.location.href = "http://127.0.0.1:5500/.public/admin.html"
+}
+
 let email = document.getElementById("inputEmail3");
 let password = document.getElementById("inputPassword3");
 const boton = document.getElementById("boton");
@@ -8,9 +14,9 @@ const realPassword = "huellitas2025";
 
 boton.addEventListener("click", function logIn(){
     if (email.value === realEmail && password.value === realPassword) {
-        window.location.href = "http://127.0.0.1:5500/.public/admin.html"
         sessionStorage.setItem("email", email.value);
         sessionStorage.setItem("password", password.value);
+        window.location.href = "http://127.0.0.1:5500/.public/admin.html"
     }
     else {
         fallo.innerText = "Inicio de sesión fallido (CAMPOS INCORRECTOS)"
