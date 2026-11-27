@@ -9,6 +9,12 @@ body {
 
 
 /*estilos del header*/
+nav {
+    background-color: #f1fdf1;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
 .brand img {
     display:block;
     width: 50px;
@@ -51,6 +57,7 @@ body {
 
 .btn.btn-sm{
     transition: 1s;
+    font-size: 1rem;
 }
 
 .btn.btn-sm:hover{
@@ -184,4 +191,97 @@ body {
 
 
 
+
 /*estilos del footer*/
+
+.site-footer .container-fluid {
+    padding: 20px;
+    background-color: #f1fdf1;
+    border-radius: 25px;
+}
+
+.footer-brand img {
+    display:block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--texto-titulos);
+    font-size: 1rem;
+}
+
+.footer-brand span {
+    font-size:1rem;
+    font-weight: bold;
+    color:var(--primario);
+
+}
+
+.footer-brand span strong{
+    font-size: 1rem;
+    color: var(--fondo-destacados);
+    font-weight: bold;
+}
+
+.footer-brand :hover {
+    color: var(--coral-profundo);
+}
+
+.site-footer {
+    padding: 2rem 0 1rem;
+    background: var(--fondo-panel-lateral);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer-grid h2.subtitulos-footer {
+    margin: 0 0 0.7rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-grid p, a {
+    display: block;
+    margin: 0 0 0.35rem;
+    color: var(--color-neutro);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.footer-grid .iconitos {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+.footer-grid .iconitos i {
+    background-color: var(--secundario);
+    border-radius: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.57rem 0.3rem;
+}
+
+.footer-bottom {
+    display:flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-bottom p, a {
+    margin: 0 0 0.35rem;
+    color: var(--color-neutro);
+    font-size: 0.6rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
