@@ -5,6 +5,14 @@ if (passwordGuardado !== "huellitas2025" || emailGuardado !== "admin@huellitasde
     window.location.href = "http://127.0.0.1:5500/.public/index.html";
 }
 
+//Cierre de sesión
+const botonCierre = document.getElementById("btnCerrarSesion");
+
+botonCierre.addEventListener("click", function cierreSesion(){
+    sessionStorage.clear();
+    window.location.href = "http://127.0.0.1:5500/.public/index.html";
+});
+
 const form = document.getElementById("form-mascota");
 const inputs = document.querySelectorAll(".form-control, .form-select")
 let idEditando = null;

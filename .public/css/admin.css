@@ -154,6 +154,14 @@
 .dashboard-content p {
     color: var(--texto-secundario);
 }
+
+#btnCerrarSesion{
+    background-color: var(--terciario);
+    border-radius: 50px;
+    font-weight: bold;
+    margin-left: 73em;
+}
+
 #btnNuevaMascota{
     background-color: var(--terciario);
 }
