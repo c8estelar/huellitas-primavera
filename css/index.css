@@ -1,5 +1,12 @@
 @import url(./base.css);
 
+:root {
+    --secciones: #f1fdf1;
+    --coral-oscuro: #c13131;
+    --subcolor: #cceed5;
+    --beige: #d3ad6c;
+}
+
 body {
     background-color: var(--fondo-general);
     color: var(--neutral);
@@ -10,17 +17,18 @@ body {
 
 /*estilos del header*/
 nav {
-    background-color: #f1fdf1;
+    background-color: var(--secciones);
     border-radius: 25px;
     margin-bottom: 20px;
 }
 
 .brand img {
-    display:block;
+    display: block;
     width: 50px;
     height: 50px;
     object-fit: cover;
 }
+
 .brand {
     display: inline-flex;
     align-items: center;
@@ -30,13 +38,13 @@ nav {
 }
 
 .brand span {
-    font-size:1rem;
+    font-size: 1rem;
     font-weight: bold;
-    color:var(--primario);
+    color: var(--primario);
 
 }
 
-.brand span strong{
+.brand span strong {
     font-size: 1rem;
     color: var(--fondo-destacados);
     font-weight: bold;
@@ -46,21 +54,21 @@ nav {
     color: var(--coral-profundo);
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
 }
 
-.navbar-toggler:hover{
+.navbar-toggler:hover {
     border: none;
     box-shadow: 0 0.35rem 0.9rem var(--primario);
 }
 
-.btn.btn-sm{
+.btn.btn-sm {
     transition: 1s;
     font-size: 1rem;
 }
 
-.btn.btn-sm:hover{
+.btn.btn-sm:hover {
     background-color: var(--secundario);
     border-radius: 99px;
     color: var(--texto-titulos);
@@ -71,26 +79,28 @@ nav {
 
 #carousel {
     border-radius: 0.7rem;
-    overflow: hidden; /*si no se pone ese overflow hidden, no se aplica el border radius puesto arriba.*/
+    overflow: hidden;
+    /*si no se pone ese overflow hidden, no se aplica el border radius puesto arriba.*/
 }
 
-#carousel .carousel-item::after{ /*--Este estilo otorga un efecto visual al final de cada carrusel item*/
-    content:"";
-    position: absolute; /*Si tuviera posición relativa no se vería el degradado */
-    z-index:1;
-    inset:0; /*este atributo hace el elemento ocupe todo el área que lo contiene*/
-    background: linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--neutral)80%, transparent) 0%,
-        color-mix(in srgb, var(--neutral)50%, transparent) 43%,
-        transparent 100%
-    );
+#carousel .carousel-item::after {
+    /*--Este estilo otorga un efecto visual al final de cada carrusel item*/
+    content: "";
+    position: absolute;
+    /*Si tuviera posición relativa no se vería el degradado */
+    z-index: 1;
+    inset: 0;
+    /*este atributo hace el elemento ocupe todo el área que lo contiene*/
+    background: linear-gradient(90deg,
+            color-mix(in srgb, var(--neutral)80%, transparent) 0%,
+            color-mix(in srgb, var(--neutral)50%, transparent) 43%,
+            transparent 100%);
 }
 
 #carousel .hero-contenido {
     position: absolute;
-    z-index:2;
-    top:50%;
+    z-index: 2;
+    top: 50%;
     left: 7%;
     width: min(80%, 32rem);
     transform: translateY(-40%);
@@ -102,7 +112,8 @@ nav {
     text-transform: uppercase;
     width: min(30%, 50rem);
     font-weight: 600;
-    background-color: color-mix(in srgb, var(--neutral) 60%, transparent); /*se usa color-mix en vez de alpha porque a veces la vista previa de la página no lo muestra*/
+    background-color: color-mix(in srgb, var(--neutral) 60%, transparent);
+    /*se usa color-mix en vez de alpha porque a veces la vista previa de la página no lo muestra*/
     padding: 0.2rem 0.5rem 0.2rem;
     border-radius: 99px;
     letter-spacing: 0.1rem;
@@ -131,7 +142,7 @@ nav {
     transition: 1s;
 }
 
-#carousel .hero-contenido .btn.primary-button:hover{
+#carousel .hero-contenido .btn.primary-button:hover {
     color: var(--texto-titulos);
     background-color: var(--fondo-contenedores);
     border-radius: 70px;
@@ -140,43 +151,121 @@ nav {
     font-weight: 550;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     width: 5%;
+}
+
+/*Sección Amigos en Primarvera entre carruselessssssssss*/
+.container.amigos {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.container.amigos span.subtitulito {
+    background-color: var(--subcolor);
+    padding: 0.2rem 0.5rem 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    color: var(--neutral);
+    margin-bottom: 2rem;
+}
+
+.container.amigos span.subtitulito i.bi.bi-hearts {
+    color: var(--coral-oscuro);
+}
+
+.container.amigos h2 {
+    margin-top: 1rem;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container.amigos span {
+    font-size: small;
 }
 
 /*estilos del carrusel tipo collar de perritos*/
 .splide {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: var(--secciones);
+    border-radius: 99px;
+}
+
+.splide__track {
+    position: relative;
+    padding-top: 3rem;
+}
+
+
+.splide__track::before {
+    content: "";
+    /*¿¿¿¿¿¿¿¿¿¿¿¿???????????????*/
+    position: absolute;
+    /*¿¿¿¿¿¿¿¿¿¿¿¿???????????????*/
+    z-index: 0;
+    top: 0.75rem;
+    left: 0;
+    right: 0;
+    height: 1.5rem;
+    border: 1px dashed var(--secundario);
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--primario), var(--fondo-secciones));
+    box-shadow: 0 2px 5px var(--neutral);
+}
+
+.splide__list {
+    position: relative;
+    /*¿¿¿¿¿¿¿¿¿¿¿¿???????????????*/
+    z-index: 1;
+}
+
+.medalla {
+    position: relative;
+    /*Permite que pueda cambiar la posición de la barrita*/
+}
+
+.medalla::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    /**/
+    transform: translateX(-50%);
+    width: 30px;
+    border-top-left-radius: 99px;
+    border-top-right-radius: 99px;
+    height: 2.5rem;
+    background: var(--beige);
 }
 
 .splide__slide {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/*.splide__track ul {
-    gap:2rem;
-}*/
 
 .splide__slide h3 {
     color: var(--coral-profundo);
     font-size: medium;
     margin-top: 1rem;
 }
+
 .medalla {
     background: linear-gradient(90deg, var(--secundario)20%, var(--primario)40%, var(--secundario)80%);
     aspect-ratio: 1;
     border: none;
     border-radius: 50%;
-    width: min(15rem, 70vw); /*esto es para*/
+    width: min(15rem, 70vw);
+    /*esto es para*/
     height: auto;
     margin: 5%;
-    padding: 1rem ;
+    padding: 1rem;
     box-shadow: 0 0.1rem 0.6rem 0.5rem var(--secundario);
 
     box-sizing: border-box;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -189,6 +278,263 @@ nav {
     object-fit: contain;
 }
 
+/*ESTILOS DE SECCIÓN DE CIFRAAASSS*/
+.cifras {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.cifra {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    box-shadow: 0 0.6rem 1.5rem color-mix(in srgb, var(--neutral) 12%, transparent);
+    height: 100%;
+}
+
+.cifra i {
+    font-size: 1.6rem;
+    color: var(--primario);
+}
+
+.cifra strong {
+    display: block;
+    font-family: var(--titulos);
+    font-size: 2rem;
+    color: var(--texto-titulos);
+    line-height: 1.2;
+}
+
+.cifra span {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+/*Sección de servicios y horariosssssssss*/
+.seccion-oscura {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(180deg,
+            color-mix(in srgb, var(--fondo-destacados)70%, transparent) 0%,
+            color-mix(in srgb, var(--fondo-destacados)60%, transparent) 45%);
+    color: var(--para-fondo-oscuro);
+}
+
+.seccion-oscura .encabezado-seccion h2 {
+    color: #fff;
+}
+
+.seccion-oscura .encabezado-seccion p {
+    color: var(--secundario);
+}
+
+.servicio {
+    background-color: color-mix(in srgb, #fff 7%, transparent);
+    border: 1px solid color-mix(in srgb, #fff 12%, transparent);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.servicio:hover {
+    background-color: color-mix(in srgb, #fff 13%, transparent);
+}
+
+.servicio i {
+    font-size: 1.8rem;
+    color: var(--texto-destacado);
+}
+
+.servicio h3 {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0.6rem 0 0.4rem;
+}
+
+.servicio p {
+    color: var(--secundario);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.horarios {
+    background-color: var(--fondo-contenedores);
+    color: var(--neutral);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.horarios h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.horarios ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.horarios li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--secundario);
+}
+
+.horarios li strong {
+    color: var(--texto-titulos);
+}
+
+.horarios .nota {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    margin-top: auto;
+}
+
+
+/*estilos sección de ubicaciónnnnnnnn*/
+
+.tarjeta-contacto {
+    background-color: #fff;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tarjeta-contacto .dato {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.tarjeta-contacto .dato>i {
+    flex: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--fondo-contenedores);
+    color: var(--primario);
+    font-size: 1.1rem;
+}
+
+.tarjeta-contacto strong {
+    display: block;
+    font-family: var(--titulos);
+    color: var(--texto-titulos);
+}
+
+.tarjeta-contacto a,
+.tarjeta-contacto span {
+    color: var(--texto-secundario);
+    text-decoration: none;
+}
+
+.tarjeta-contacto a:hover {
+    color: var(--coral-profundo);
+}
+
+.redes {
+    display: flex;
+    gap: 2rem;
+    margin-top: auto;
+}
+
+.redes a {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--fondo-secciones);
+    color: #fff !important;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.redes a:hover {
+    background-color: var(--coral-profundo);
+    transform: translateY(-3px);
+}
+
+.mapa {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    height: 100%;
+    min-height: 320px;
+    box-shadow: 0 0.6rem 1.5rem color-mix(in srgb, var(--neutral) 12%, transparent);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+    display: block;
+}
+
+/*estilos del banner final*/
+.cta {
+    padding-bottom: 5rem;
+    margin-top: 7rem;
+}
+
+.cta-caja {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: linear-gradient(120deg, var(--coral-profundo), var(--terciario));
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    color: #fff;
+    overflow: hidden;
+}
+
+.cta-caja img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    filter: drop-shadow(0 0.5rem 0.8rem rgba(0, 0, 0, 0.2));
+}
+
+.cta-caja > div {
+    flex: 1 1 280px;
+}
+
+.cta-caja h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+.cta-caja p {
+    margin: 0;
+    opacity: 0.95;
+}
+
+.cta-caja .btn-light {
+    border-radius: 99px;
+    font-family: var(--titulos);
+    font-weight: 600;
+    color: var(--coral-profundo);
+}
 
 
 
@@ -196,12 +542,12 @@ nav {
 
 .site-footer .container-fluid {
     padding: 20px;
-    background-color: #f1fdf1;
+    background-color: var(--secciones);
     border-radius: 25px;
 }
 
 .footer-brand img {
-    display:block;
+    display: block;
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -216,13 +562,13 @@ nav {
 }
 
 .footer-brand span {
-    font-size:1rem;
+    font-size: 1rem;
     font-weight: bold;
-    color:var(--primario);
+    color: var(--primario);
 
 }
 
-.footer-brand span strong{
+.footer-brand span strong {
     font-size: 1rem;
     color: var(--fondo-destacados);
     font-weight: bold;
@@ -250,7 +596,8 @@ nav {
     font-weight: bold;
 }
 
-.footer-grid p, a {
+.footer-grid p,
+a {
     display: block;
     margin: 0 0 0.35rem;
     color: var(--color-neutro);
@@ -273,12 +620,13 @@ nav {
 }
 
 .footer-bottom {
-    display:flex;
+    display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.footer-bottom p, a {
+.footer-bottom p,
+a {
     margin: 0 0 0.35rem;
     color: var(--color-neutro);
     font-size: 0.6rem;
