@@ -62,10 +62,18 @@
                 <section class="stats-grid" aria-label="Resumen de adopciones">
                     <article class="stat-card">
                         <div class="stat-top">
-                            <span class="stat-icon"><i class="bi bi-paw-fill" aria-hidden="true"></i></span>
+                            <span class="stat-icon stat-icon-paw" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" aria-label="Huella">
+                                    <ellipse cx="12" cy="16.5" rx="5.5" ry="4.5"></ellipse>
+                                    <ellipse cx="5.5" cy="10.5" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="9.25" cy="5.75" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="14.75" cy="5.75" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="18.5" cy="10.5" rx="2.25" ry="3"></ellipse>
+                                </svg>
+                            </span>
                             <span class="status-tag tag-green">Activos</span>
                         </div>
-                        <p class="stat-number">18</p>
+                        <p class="stat-number" id="stat-disponibles">0</p>
                         <p class="stat-label">En adopción activa</p>
                         <span class="stat-progress progress-green" aria-hidden="true"></span>
                     </article>
@@ -75,7 +83,7 @@
                             <span class="stat-icon"><i class="bi bi-hourglass-split" aria-hidden="true"></i></span>
                             <span class="status-tag tag-mint">Entrevistas</span>
                         </div>
-                        <p class="stat-number">5</p>
+                        <p class="stat-number" id="stat-proceso">0</p>
                         <p class="stat-label">En proceso de adopción</p>
                         <span class="stat-progress progress-mint" aria-hidden="true"></span>
                     </article>
@@ -85,7 +93,7 @@
                             <span class="stat-icon"><i class="bi bi-heart" aria-hidden="true"></i></span>
                             <span class="status-tag tag-coral">Primavera 2025</span>
                         </div>
-                        <p class="stat-number">32</p>
+                        <p class="stat-number" id="stat-adoptados">0</p>
                         <p class="stat-label">Finales felices logrados</p>
                         <span class="stat-progress progress-coral" aria-hidden="true"></span>
                     </article>
@@ -95,7 +103,7 @@
                             <span class="stat-icon"><i class="bi bi-envelope-check" aria-hidden="true"></i></span>
                             <span class="status-tag tag-green">Por evaluar</span>
                         </div>
-                        <p class="stat-number">7</p>
+                        <p class="stat-number" id="stat-total">0</p>
                         <p class="stat-label">Solicitudes pendientes</p>
                         <span class="stat-progress progress-dark" aria-hidden="true"></span>
                     </article>
@@ -103,7 +111,7 @@
 
             </section>
 
-            <section class="col-lg-12 px-4">
+            <section class="pets-section" id="expedientes">
                 <div class="card shadow-sm">
                     <div class="card-header fw-semibold">
                         <i class="bi bi-table"></i> Mascotas registradas

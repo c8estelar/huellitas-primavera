@@ -1,16 +1,28 @@
 {
   "mascotas": [
     {
-      "name": "alex",
+      "name": "Pedro",
       "genre": "Macho",
-      "race": "husky",
-      "age": 3,
+      "race": "Pitbull",
+      "age": 12,
       "ageUnit": "Años",
       "size": "Mediano",
       "img": "",
+      "status": "Adoptado",
+      "details": "",
+      "id": "XR5Inxf2hIk"
+    },
+    {
+      "name": "Pedro",
+      "genre": "Hembra",
+      "race": "husky",
+      "age": 1,
+      "ageUnit": "Meses",
+      "size": "Pequeño",
+      "img": "",
       "status": "Disponible",
-      "details": "a",
-      "id": "nTdzmvA_W10"
+      "details": "",
+      "id": "4VubvUDhoe0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
