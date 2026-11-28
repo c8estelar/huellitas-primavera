@@ -18,14 +18,34 @@
 
   <body class="admin-page">
     <div class="admin-layout">
-      <aside class="admin-sidebar">
-        <a class="sidebar-brand" href="./index.html">
-          <img src="./img/logo_huellitas.png" alt="" />
-          <span>
-            <strong>Panel de Refugio</strong>
-            <small>Gestión y Rescate</small>
-          </span>
-        </a>
+<aside class="admin-sidebar">
+            <a class="sidebar-brand" href="./index.html">
+                <img src="./img/logo_huellitas.png" alt="">
+                <span>
+                    <strong>Panel de Refugio</strong>
+                    <small>Gestión y Rescate</small>
+                </span>
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Navegación de administración">
+                <a class="sidebar-link is-active" href="#resumen">
+                    <i class="bi bi-grid" aria-hidden="true"></i>
+                    Resumen General
+                </a>
+                <a class="sidebar-link" href="#expedientes">
+                    <i class="bi bi-paw" aria-hidden="true"></i>
+                    Expedientes Caninos
+                </a>
+                <a class="sidebar-link" href="#solicitudes">
+                    <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+                    Solicitudes de Adopción
+                </a>
+                <a class="sidebar-link" href="#visitas">
+                    <i class="bi bi-calendar3" aria-hidden="true"></i>
+                    Visitas y Citas
+                </a>
+            </nav>
+        </aside>
 
         <main class="admin-main" id="resumen">
             <header class="topbar">
@@ -33,13 +53,7 @@
                     <img src="./img/logo_huellitas.png" alt="">
                     <span>Huellitas de Primavera</span>
                 </a>
-                <button
-            type="button"
-            class="btn"
-            id="btnCerrarSesion"
-          >
-            Cerrar Sesión
-          </button>
+                <button type="button" class="btn" id="btnCerrarSesion">Cerrar Sesión</button>
             </header>
 
             <section class="dashboard-content">
