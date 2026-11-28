@@ -33,6 +33,13 @@
                     <img src="./img/logo_huellitas.png" alt="">
                     <span>Huellitas de Primavera</span>
                 </a>
+                <button
+            type="button"
+            class="btn"
+            id="btnCerrarSesion"
+          >
+            Cerrar Sesión
+          </button>
             </header>
 
             <section class="dashboard-content">
@@ -59,7 +66,7 @@
                             <span class="status-tag tag-green">Activos</span>
                         </div>
                         <p class="stat-number" id="stat-disponibles">0</p>
-                        <p class="stat-label">En adopción activa</p>
+                        <p class="stat-label">Disponibles para adoptar</p>
                         <span class="stat-progress progress-green" aria-hidden="true"></span>
                     </article>
 
@@ -76,7 +83,7 @@
                     <article class="stat-card stat-card-coral">
                         <div class="stat-top">
                             <span class="stat-icon"><i class="bi bi-heart" aria-hidden="true"></i></span>
-                            <span class="status-tag tag-coral">Primavera 2025</span>
+                            <span class="status-tag tag-coral">Adoptados</span>
                         </div>
                         <p class="stat-number" id="stat-adoptados">0</p>
                         <p class="stat-label">Finales felices logrados</p>
@@ -86,26 +93,13 @@
                     <article class="stat-card">
                         <div class="stat-top">
                             <span class="stat-icon"><i class="bi bi-envelope-check" aria-hidden="true"></i></span>
-                            <span class="status-tag tag-green">Por evaluar</span>
+                            <span class="status-tag tag-green">Total en el refugio</span>
                         </div>
                         <p class="stat-number" id="stat-total">0</p>
                         <p class="stat-label">Solicitudes pendientes</p>
                         <span class="stat-progress progress-dark" aria-hidden="true"></span>
                     </article>
                 </section>
-
-            <article class="stat-card stat-card-coral">
-              <div class="stat-top">
-                <span class="stat-icon"
-                  ><i class="bi bi-heart" aria-hidden="true"></i
-                ></span>
-              </div>
-              <p class="stat-number" id="adoptados"></p>
-              <span
-                class="stat-progress progress-coral"
-                aria-hidden="true"
-              ></span>
-            </article>
           </section>
         </section>
 

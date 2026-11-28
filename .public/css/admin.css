@@ -39,7 +39,6 @@
 
 .admin-layout {
     min-height: 100vh;
-    display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
 }
 
@@ -123,6 +122,12 @@
     border-bottom: 1px solid #e7f2e8;
     color: var(--texto-titulos);
     font-weight: 600;
+}
+#btnCerrarSesion{
+    background-color: var(--terciario);
+    border-radius: 50px;
+    font-weight: bold;
+    margin-left: 73em;
 }
 
 .topbar-brand {
