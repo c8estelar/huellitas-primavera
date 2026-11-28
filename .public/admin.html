@@ -27,87 +27,72 @@
           </span>
         </a>
 
-        <nav class="sidebar-nav" aria-label="Navegación de administración">
-          <a class="sidebar-link is-active" href="#resumen">
-            <i class="bi bi-grid" aria-hidden="true"></i>
-            Resumen General
-          </a>
-          <a class="sidebar-link" href="#expedientes">
-            <i class="bi bi-paw" aria-hidden="true"></i>
-            Expedientes Caninos
-          </a>
-          <a class="sidebar-link" href="#solicitudes">
-            <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
-            Solicitudes de Adopción
-          </a>
-          <a class="sidebar-link" href="#visitas">
-            <i class="bi bi-calendar3" aria-hidden="true"></i>
-            Visitas y Citas
-          </a>
-        </nav>
-      </aside>
+        <main class="admin-main" id="resumen">
+            <header class="topbar">
+                <a class="topbar-brand" href="./index.html">
+                    <img src="./img/logo_huellitas.png" alt="">
+                    <span>Huellitas de Primavera</span>
+                </a>
+            </header>
 
-      <main class="admin-main" id="resumen">
-        <header class="topbar">
-          <a class="topbar-brand" href="./index.html">
-            <img src="./img/logo_huellitas.png" alt="" />
-            <span>Huellitas de Primavera</span>
-          </a>
-          <button
-            type="button"
-            class="btn"
-            id="btnCerrarSesion"
-          >
-            Cerrar Sesión
-          </button>
-        </header>
+            <section class="dashboard-content">
+                <h1>Panel de Gestión de Perritos y Adopciones</h1>
+                <p>Supervisa los expedientes y el estado de las adopciones del refugio.</p>
+                <div class="d-flex justify-content-end my-3">
+                    <button type="button" class="btn" id="btnNuevaMascota" data-bs-toggle="modal"
+                        data-bs-target="#modalMascota">
+                        <i class="bi bi-plus-circle" aria-hidden="true"></i> Agregar mascota
+                    </button>
+                </div>
+                <section class="stats-grid" aria-label="Resumen de adopciones">
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon stat-icon-paw" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" aria-label="Huella">
+                                    <ellipse cx="12" cy="16.5" rx="5.5" ry="4.5"></ellipse>
+                                    <ellipse cx="5.5" cy="10.5" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="9.25" cy="5.75" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="14.75" cy="5.75" rx="2.25" ry="3"></ellipse>
+                                    <ellipse cx="18.5" cy="10.5" rx="2.25" ry="3"></ellipse>
+                                </svg>
+                            </span>
+                            <span class="status-tag tag-green">Activos</span>
+                        </div>
+                        <p class="stat-number" id="stat-disponibles">0</p>
+                        <p class="stat-label">En adopción activa</p>
+                        <span class="stat-progress progress-green" aria-hidden="true"></span>
+                    </article>
 
-        <section class="dashboard-content">
-          <h1>Panel de Gestión de Perritos y Adopciones</h1>
-          <p>
-            Supervisa los expedientes y el estado de las adopciones del refugio.
-          </p>
-          <div class="d-flex justify-content-end my-3">
-            <button
-              type="button"
-              class="btn"
-              id="btnNuevaMascota"
-              data-bs-toggle="modal"
-              data-bs-target="#modalMascota"
-            >
-              <i class="bi bi-plus-circle" aria-hidden="true"></i> Agregar
-              mascota
-            </button>
-          </div>
-          <section class="stats-grid" aria-label="Resumen de adopciones">
-            <article class="stat-card">
-              <div class="stat-top">
-                <span class="stat-icon"
-                  ><i class="bi bi-paw-fill" aria-hidden="true"></i
-                ></span>
-                <span class="status-tag tag-green">Activos</span>
-              </div>
-              <p class="stat-number" id="activos"></p>
-              <p class="stat-label">En adopción activa</p>
-              <span
-                class="stat-progress progress-green"
-                aria-hidden="true"
-              ></span>
-            </article>
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-hourglass-split" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-mint">Entrevistas</span>
+                        </div>
+                        <p class="stat-number" id="stat-proceso">0</p>
+                        <p class="stat-label">En proceso de adopción</p>
+                        <span class="stat-progress progress-mint" aria-hidden="true"></span>
+                    </article>
 
-            <article class="stat-card">
-              <div class="stat-top">
-                <span class="stat-icon"
-                  ><i class="bi bi-hourglass-split" aria-hidden="true"></i
-                ></span>
-              </div>
-              <p class="stat-number" id="proceso"></p>
-              <p class="stat-label">En proceso de adopción</p>
-              <span
-                class="stat-progress progress-mint"
-                aria-hidden="true"
-              ></span>
-            </article>
+                    <article class="stat-card stat-card-coral">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-heart" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-coral">Primavera 2025</span>
+                        </div>
+                        <p class="stat-number" id="stat-adoptados">0</p>
+                        <p class="stat-label">Finales felices logrados</p>
+                        <span class="stat-progress progress-coral" aria-hidden="true"></span>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon"><i class="bi bi-envelope-check" aria-hidden="true"></i></span>
+                            <span class="status-tag tag-green">Por evaluar</span>
+                        </div>
+                        <p class="stat-number" id="stat-total">0</p>
+                        <p class="stat-label">Solicitudes pendientes</p>
+                        <span class="stat-progress progress-dark" aria-hidden="true"></span>
+                    </article>
+                </section>
 
             <article class="stat-card stat-card-coral">
               <div class="stat-top">
@@ -124,38 +109,36 @@
           </section>
         </section>
 
-        <section class="col-lg-12 px-4">
-          <div class="card shadow-sm">
-            <div class="card-header fw-semibold">
-              <i class="bi bi-table"></i> Mascotas registradas
-            </div>
-            <div class="card-body p-0">
-              <div class="table-responsive">
-                <table
-                  class="table table-striped table-hover align-middle mb-0"
-                >
-                  <thead class="table-dark">
-                    <tr>
-                      <th>ID</th>
-                      <th>Foto</th>
-                      <th>Nombre</th>
-                      <th>Género</th>
-                      <th>Raza</th>
-                      <th>Edad</th>
-                      <th>Tamaño</th>
-                      <th>Estado</th>
-                      <th>Detalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <!-- admin.js pinta las filas aquí -->
-                  <tbody id="tabla-mascotas"></tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+            <section class="pets-section" id="expedientes">
+                <div class="card shadow-sm">
+                    <div class="card-header fw-semibold">
+                        <i class="bi bi-table"></i> Mascotas registradas
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Foto</th>
+                                        <th>Nombre</th>
+                                        <th>Género</th>
+                                        <th>Raza</th>
+                                        <th>Edad</th>
+                                        <th>Tamaño</th>
+                                        <th>Estado</th>
+                                        <th>Detalles</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <!-- admin.js pinta las filas aquí -->
+                                <tbody id="tabla-mascotas"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
     <div
       class="modal fade"

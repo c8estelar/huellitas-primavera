@@ -155,11 +155,254 @@
     color: var(--texto-secundario);
 }
 
-#btnCerrarSesion{
-    background-color: var(--terciario);
-    border-radius: 50px;
-    font-weight: bold;
-    margin-left: 73em;
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    position: relative;
+    min-height: 155px;
+    overflow: hidden;
+    padding: 1.25rem;
+    border: 1px solid #dceadf;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 0.35rem 1rem rgba(51, 76, 61, 0.06);
+}
+
+.stat-card-coral {
+    border-color: #f1d3ca;
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.stat-icon {
+    display: inline-grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid #b8d7bf;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #edf8ef, #d5ebda);
+    color: #4f8152;
+    box-shadow: 0 0.35rem 0.8rem rgba(78, 129, 82, 0.12);
+    font-size: 1.25rem;
+}
+
+.stat-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.stat-card-coral .stat-icon {
+    background: #ffe9e2;
+    color: var(--coral-profundo);
+}
+
+.status-tag {
+    border-radius: 99px;
+    padding: 0.28rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.tag-green {
+    background: #dff1e3;
+    color: #35673a;
+}
+
+.tag-mint {
+    background: #edf7e9;
+    color: #587c50;
+}
+
+.tag-coral {
+    background: #ffebe5;
+    color: #a8432d;
+}
+
+.stat-number {
+    margin: 0.85rem 0 0;
+    color: var(--texto-titulos);
+    font-family: var(--titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    margin: 0.45rem 0 0;
+    font-size: 0.88rem;
+}
+
+.stat-progress {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.1rem;
+    left: 1.25rem;
+    height: 4px;
+    border-radius: 99px;
+}
+
+.progress-green {
+    background: #78a86b;
+}
+
+.progress-mint {
+    background: #b9d0a8;
+}
+
+.progress-coral {
+    background: #e99584;
+}
+
+.progress-dark {
+    background: #587c50;
+}
+
+.pets-section {
+    width: min(calc(100% - 4rem), 1400px);
+    margin: 0 auto 2rem;
+}
+
+.pets-section .card {
+    border: 1px solid #dceadf;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.pets-section .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 1.15rem 1.25rem;
+    border-bottom: 1px solid #dceadf;
+    background: linear-gradient(90deg, #fff, #f7fcf8);
+    color: var(--texto-titulos);
+}
+
+.pets-section .card-header i {
+    color: var(--primario);
+    font-size: 1.05rem;
+}
+
+.pets-section .table {
+    --bs-table-bg: #fff;
+    --bs-table-striped-bg: #f7fbf8;
+    --bs-table-hover-bg: #eef7f0;
+    --bs-table-color: var(--neutral);
+    min-width: 980px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.pets-section thead th {
+    border: 0;
+    background: var(--fondo-secciones);
+    color: #fff;
+    padding: 0.85rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.pets-section thead th:first-child {
+    border-radius: 0;
+}
+
+.pets-section tbody td {
+    height: 70px;
+    border-color: #edf3ee;
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.pets-section tbody td:nth-child(2),
+.pets-section tbody td:nth-child(3),
+.pets-section tbody td:nth-child(8),
+.pets-section tbody td:last-child {
+    white-space: nowrap;
+}
+
+.pets-section tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.pet-photo {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #e8f2ea;
+    border-radius: 0.85rem;
+    object-fit: cover;
+    background: var(--fondo-contenedores);
+    box-shadow: 0 0.25rem 0.7rem rgba(51, 76, 61, 0.08);
+}
+
+.pet-status {
+    display: inline-block;
+    min-width: 88px;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    padding: 0.38rem 0.65rem;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.pet-status-disponible {
+    background: #dff1e3;
+    border-color: #c7dfcb;
+    color: #35673a;
+}
+
+.pet-status-proceso {
+    background: #fff0d6;
+    border-color: #efddb5;
+    color: #8a621d;
+}
+
+.pet-status-adoptado {
+    background: #ffebe5;
+    border-color: #f3cbbb;
+    color: #a8432d;
+}
+
+.table-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.45rem;
+}
+
+.table-actions .btn {
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: none;
+    border-radius: 0.65rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.table-actions .btn:hover,
+.table-actions .btn:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 0.35rem 0.75rem rgba(51, 76, 61, 0.14);
+}
+
+.empty-state {
+    padding: 2.5rem 1rem;
+    color: var(--texto-secundario);
+    text-align: center;
 }
 
 #btnNuevaMascota{
@@ -199,5 +442,19 @@
 
     .dashboard-content {
         padding: 1.25rem 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pets-section {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
