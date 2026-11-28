@@ -68,6 +68,11 @@
     height: 42px;
     object-fit: contain;
 }
+#img-table{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
 
 .sidebar-brand strong,
 .sidebar-brand small {

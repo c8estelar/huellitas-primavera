@@ -1,9 +1,27 @@
+const emailGuardado = sessionStorage.getItem("email");
+const passwordGuardado = sessionStorage.getItem("password");
+
+if (passwordGuardado !== "huellitas2025" || emailGuardado !== "admin@huellitasdeprimavera.org"){
+    window.location.href = "http://127.0.0.1:5500/.public/index.html";
+}
+
+//Cierre de sesión
+const botonCierre = document.getElementById("btnCerrarSesion");
+
+botonCierre.addEventListener("click", function cierreSesion(){
+    sessionStorage.clear();
+    window.location.href = "http://127.0.0.1:5500/.public/index.html";
+});
+
 const form = document.getElementById("form-mascota");
 const inputs = document.querySelectorAll(".form-control, .form-select")
 let idEditando = null;
 const modalElement = document.getElementById("modalMascota");
 const modalMascota = bootstrap.Modal.getOrCreateInstance(modalElement);
 const tituloModal = document.getElementById("tituloModalMascota");
+let activos = document.getElementById("activos")
+let proceso = document.getElementById("proceso")
+let adoptados = document.getElementById("adoptados")
 document.getElementById("btnNuevaMascota").addEventListener("click", creacion);
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -96,7 +114,8 @@ async function listarMascotas() {
                             </td>
                         </tr>
                         `;
-    });
+                    })
+
     const buttons = table.querySelectorAll(".btn");
     buttons.forEach((btn) => {
         btn.addEventListener("click", async (event) => {
